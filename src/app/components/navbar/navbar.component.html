@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="container nav-inner">
+        <div class="brand">
+            <a routerLink="/" class="logo">Gundlapalli <span>Mahesh</span></a>
+        </div>
+
+        <button class="nav-toggle" (click)="toggleMobile()">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <ul [class.open]="mobileOpen" class="nav-links">
+            <li><a [class.active]="selectedPage === 'home'" (click)="navigationPage('home')">Home</a></li>
+            <li><a [class.active]="selectedPage === 'about'" (click)="navigationPage('about')">About</a></li>
+            <li><a [class.active]="selectedPage === 'projects'" (click)="navigationPage('projects')">Projects</a></li>
+            <li><a [class.active]="selectedPage === 'contact'" (click)="navigationPage('contact')">Contact</a></li>
+        </ul>
+    </div>
+</nav>

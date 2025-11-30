@@ -1,0 +1,165 @@
+/* about.component.scss */
+:host {
+    display: block;
+    background: #0b0707;
+    /* very dark base */
+    color: #fff;
+    min-height: 100vh;
+    padding: 6rem 1.5rem;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* container layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+/* left image wrap */
+.about-left {
+    flex: 0 0 46%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-image-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+
+    .hero-image {
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center 0%;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.46), 0 0 140px rgba(222, 129, 129, 0.62);
+        background: #000;
+    }
+}
+
+/* subtle outer glow ring */
+.glow {
+    content: "";
+    position: absolute;
+    inset: 4%;
+    border-radius: 50%;
+    box-shadow: 0 0 60px 20px rgb(220 20 20 / 57%);
+    pointer-events: none;
+}
+
+/* right content */
+.about-right {
+    flex: 1 1 50%;
+    max-width: 640px;
+}
+
+.eyebrow {
+    font-size: clamp(2.4rem, 4vw, 4.2rem);
+    line-height: 1;
+    margin: 0 0 0.4rem 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #fff;
+}
+
+.eyebrow .accent {
+    color: #ff2b2b;
+    margin-left: 6px;
+}
+
+/* role/title */
+.role {
+    color: #ff4747;
+    font-weight: 700;
+    margin: 0 0 1.2rem 0;
+    font-size: 1.2rem;
+}
+
+/* paragraph */
+.lead {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.9;
+    margin-bottom: 1.6rem;
+    max-width: 36rem;
+    font-size: 1.02rem;
+}
+
+/* buttons */
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    padding: 0.7rem 1.3rem;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: all 200ms ease;
+    box-shadow: none;
+}
+
+.btn.primary {
+    background: linear-gradient(90deg, #ff3b3b, #ff1f1f);
+    border: none;
+    color: #fff;
+    box-shadow: 0 8px 30px rgba(255, 40, 40, 0.18);
+}
+
+.btn.ghost {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* mobile responsiveness */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 3rem 1rem;
+    }
+
+    .about-left {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .hero-image-wrap {
+        width: min(320px, 70vw);
+        height: min(320px, 70vw);
+        transform: none;
+    }
+
+    .about-right {
+        text-align: center;
+        padding: 0 0.5rem;
+    }
+
+    .lead {
+        max-width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 2.6rem;
+    }
+}

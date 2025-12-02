@@ -1,0 +1,109 @@
+.contact-wrapper {
+    color: #ffffff;
+    background-image: url("https://i.pinimg.com/736x/d1/70/80/d17080dd1da89e40520bbda63039daaf.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+ background: #78646440;
+    padding: 20px 31px;
+    max-width: 800px;
+}
+
+.contact-inner {
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 0 12px;
+}
+input::placeholder {
+  font-size: 12px;
+  color: #999;
+}
+.contact-form {
+    display: grid;
+    grid-template-columns: 1.1fr 1.9fr;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.fields-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field-right {
+    height: 100%;
+}
+
+.form-group input,
+.field-right textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    background: #ffffff;
+    color: #333;
+    font-size: 16px;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.field-right textarea {
+    height: 100%;
+    min-height: 160px;
+    resize: vertical;
+}
+
+/* focus state */
+.form-group input:focus,
+.field-right textarea:focus {
+    box-shadow: 0 0 0 2px #e74c3c;
+}
+
+/* send button row - full width under form */
+.btn-row {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.submit-btn {
+    padding: 11px 40px;
+    border: none;
+    background-color: #e74c3c;
+    color: #ffffff;
+    font-size: 13px;
+  text-transform:uppercase;
+  font-weight:700;
+  letter-spacing:2px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .field-right textarea {
+        min-height: 140px;
+    }
+}

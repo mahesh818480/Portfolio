@@ -29,6 +29,29 @@
             margin-bottom: 1rem;
         }
 
+        .cursor {
+            position: relative;
+            width: 24em;
+            font-size: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);
+        }
+
+        .typewriter-animation {
+            animation: typewriter 5s steps(20) infinite normal both, blinkingCursor 0.5s step-end infinite;
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 55%;
+            }
+        }
+
         .lead {
             color: #bbb;
             max-width: 55ch;

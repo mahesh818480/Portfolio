@@ -19,5 +19,6 @@ export class NavbarComponent {
     this.mobileOpen = false;
     this.selectedPage = pages;
     this.route.navigate([pages]);
+    console.log(this.route.url,'2222::::')
   }
 }

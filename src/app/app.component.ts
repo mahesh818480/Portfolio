@@ -1,14 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { NavbarComponent } from "./components/navbar/navbar.component";
-import { MainpageComponent } from './mainpage/mainpage.component';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, MainpageComponent],
+  imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   styles: [`:host { display: flex; flex-direction: column; height: 100vh; }`]

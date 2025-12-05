@@ -4,9 +4,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule,ReactiveFormsModule],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
   sent = false;

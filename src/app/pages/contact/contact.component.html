@@ -3,44 +3,46 @@
     <div class="contact-inner">
 
       <h2 class="contact-title">Contact Us</h2>
+
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
 
         <div class="fields-left">
+          <!-- NAME -->
           <div class="form-group">
-            <input
-              type="text"
-              formControlName="name"
-              placeholder="YOUR NAME *"
-            />
+            <input type="text" formControlName="name" placeholder="YOUR NAME *" />
+            <small class="error" *ngIf="f['name'].invalid && (f['name'].touched || submitted)">
+              Name must be at least 3 characters.
+            </small>
           </div>
 
+          <!-- EMAIL -->
           <div class="form-group">
-            <input
-              type="email"
-              formControlName="email"
-              placeholder="YOUR EMAIL *"
-            />
+            <input type="email" formControlName="email" placeholder="YOUR EMAIL *" />
+            <small class="error" *ngIf="f['email'].invalid && (f['email'].touched || submitted)">
+              Please enter a valid email address.
+            </small>
           </div>
 
+          <!-- PHONE -->
           <div class="form-group">
-            <input
-              type="text"
-              formControlName="phone"
-              placeholder="YOUR PHONE *"
-            />
+            <input type="text" formControlName="phone" placeholder="YOUR PHONE *" />
+            <small class="error" *ngIf="f['phone'].invalid && (f['phone'].touched || submitted)">
+              Please enter a valid 10-digit phone number.
+            </small>
           </div>
         </div>
 
+        <!-- MESSAGE -->
         <div class="field-right">
-          <textarea
-            formControlName="message"
-            placeholder="YOUR MESSAGE *"
-          ></textarea>
+          <textarea formControlName="message" placeholder="YOUR MESSAGE *"></textarea>
+          <small class="error" *ngIf="f['message'].invalid && (f['message'].touched || submitted)">
+            Message must be at least 10 characters.
+          </small>
         </div>
 
         <div class="btn-row">
-          <button type="submit" class="submit-btn">
-            SEND MESSAGE
+          <button type="submit" class="submit-btn" [disabled]="isSending">
+            {{ isSending ? 'SENDING...' : 'SEND MESSAGE' }}
           </button>
         </div>
 
@@ -49,3 +51,12 @@
     </div>
   </div>
 </section>
+
+<!-- ✅ Success Modal -->
+<div class="modal-backdrop" *ngIf="showSuccessModal">
+  <div class="modal">
+    <h3>Message Sent Successfully</h3>
+    <p>Your message has been sent to the admin. He will reply soon.</p>
+    <button (click)="closeModal()">OK</button>
+  </div>
+</div>

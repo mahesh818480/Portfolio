@@ -9,10 +9,10 @@
         </button>
 
         <ul [class.open]="mobileOpen" class="nav-links">
-            <li [class.active]="selectedPage === 'home'"><a (click)="navigationPage('home')">Home</a></li>
-            <li [class.active]="selectedPage === 'about'"><a (click)="navigationPage('about')">About</a></li>
-            <li [class.active]="selectedPage === 'projects'"><a (click)="navigationPage('projects')">Projects</a></li>
-            <li [class.active]="selectedPage === 'contact'"><a (click)="navigationPage('contact')">Contact</a></li>
+            <li [class.active]="selectedPage === 'home'" (click)="navigationPage('home')"><a>Home</a></li>
+            <li [class.active]="selectedPage === 'about'" (click)="navigationPage('about')"><a>About</a></li>
+            <li [class.active]="selectedPage === 'projects'" (click)="navigationPage('projects')"><a>Projects</a></li>
+            <li [class.active]="selectedPage === 'contact'" (click)="navigationPage('contact')"><a>Contact</a></li>
         </ul>
     </div>
 </nav>

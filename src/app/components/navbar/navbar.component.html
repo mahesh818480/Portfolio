@@ -5,14 +5,14 @@
         </div>
 
         <button class="nav-toggle" (click)="toggleMobile()">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            <span> &#9776; </span>
         </button>
 
         <ul [class.open]="mobileOpen" class="nav-links">
-            <li><a [class.active]="selectedPage === 'home'" (click)="navigationPage('home')">Home</a></li>
-            <li><a [class.active]="selectedPage === 'about'" (click)="navigationPage('about')">About</a></li>
-            <li><a [class.active]="selectedPage === 'projects'" (click)="navigationPage('projects')">Projects</a></li>
-            <li><a [class.active]="selectedPage === 'contact'" (click)="navigationPage('contact')">Contact</a></li>
+            <li [class.active]="selectedPage === 'home'"><a (click)="navigationPage('home')">Home</a></li>
+            <li [class.active]="selectedPage === 'about'"><a (click)="navigationPage('about')">About</a></li>
+            <li [class.active]="selectedPage === 'projects'"><a (click)="navigationPage('projects')">Projects</a></li>
+            <li [class.active]="selectedPage === 'contact'"><a (click)="navigationPage('contact')">Contact</a></li>
         </ul>
     </div>
 </nav>

@@ -57,7 +57,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
     if (typeof window !== 'undefined') {
       const target = document.querySelector(`[data-section="${pages}"]`) as HTMLElement;
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+        // For mobile, ensure navbar stays visible by scrolling to top first
+        if (this.isMobile) {
+          window.scrollTo({ top: 0, behavior: 'auto' });
+          // Then scroll to target after a brief delay
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }, 50);
+        } else {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
   }

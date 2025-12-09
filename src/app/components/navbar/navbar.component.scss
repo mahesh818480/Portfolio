@@ -50,10 +50,16 @@
     }
 
     .nav-toggle {
-        display: none;
+        display: block;
         background: none;
         border: none;
         cursor: pointer;
+    }
+
+    @media (min-width: 801px) {
+        .nav-toggle {
+            display: none;
+        }
     }
 }
 

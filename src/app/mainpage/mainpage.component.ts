@@ -28,6 +28,9 @@ export class MainpageComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) return;
 
+    // always set home as active initially before setting up observers
+    this.active.setActive('home');
+
     // delay to ensure DOM is fully laid out
       const options = { root: null, threshold: 0.3 };
       this.observer = new IntersectionObserver((entries) => {
@@ -60,8 +63,6 @@ export class MainpageComponent implements AfterViewInit, OnDestroy {
           (target as HTMLElement).scrollIntoView({ behavior: 'auto' });
         }, 0);
       }
-      // always set home as active initially
-      this.active.setActive('home');
   }
 
   ngOnDestroy(): void {

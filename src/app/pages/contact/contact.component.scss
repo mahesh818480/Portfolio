@@ -77,7 +77,7 @@ input::placeholder {
 /* focus state */
 .form-group input:focus,
 .field-right textarea:focus {
-    box-shadow: 0 0 0 2px #ff2b2b;
+    box-shadow: 0 0 0 2px #e74c3c;
 }
 
 /* send button row - full width under form */
@@ -91,7 +91,7 @@ input::placeholder {
 .submit-btn {
     padding: 11px 40px;
     border: none;
-   background-color: #ff2b2b;
+    background-color: #e74c3c;
     color: #ffffff;
     font-size: 13px;
     text-transform: uppercase;

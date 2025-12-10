@@ -5,8 +5,7 @@
     /* very dark base */
     color: #fff;
     min-height: 100vh;
-    /* reduced padding to remove large empty space on mobile */
-    padding: 2.5rem 1rem;
+    padding: 6rem 1.5rem;
     box-sizing: border-box;
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
@@ -36,8 +35,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    /* smaller padding to reduce surrounding empty space */
-    padding: 0.5rem;
+    padding: 2rem;
 
     .hero-image {
         width: 420px;
@@ -52,6 +50,7 @@
 
 /* subtle outer glow ring */
 .glow {
+    content: "";
     position: absolute;
     inset: 4%;
     border-radius: 50%;
@@ -134,7 +133,6 @@
 
     .lead {
         max-width: 100%;
-        font-family: sans-serif;
     }
 
     .eyebrow {

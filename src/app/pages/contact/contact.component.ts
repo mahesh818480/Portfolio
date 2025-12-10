@@ -68,7 +68,6 @@ export class ContactComponent {
       })
       .then(
         (res) => {
-          console.log('SUCCESS!', res);
           this.contactForm.reset();
           this.submitted = false;
           this.isSending = false;
@@ -77,7 +76,6 @@ export class ContactComponent {
           setTimeout(() => (this.showSuccessModal = false), 3000);
         },
         (err) => {
-          console.error('FAILED...', err);
           alert('Failed to send message ❌ Please try again.');
           this.isSending = false;
         }

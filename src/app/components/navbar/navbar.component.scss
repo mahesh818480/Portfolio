@@ -85,15 +85,17 @@
 
             &.open {
                 display: flex;
+                width: 53%;
             }
 
             li {
-                padding: 1px 41px;
                 border-bottom: 1px solid rgba(220, 20, 20, 0.44);
-                padding: 7px 10px;
+                padding: 12px 23px;
 
                 a {
                     padding: 0;
+                    font-size: larger;
+                    font-family: sans-serif;
                 }
 
             }

@@ -19,7 +19,6 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    console.log('AppComponent initialized');
     this.routerSub = this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(() => {
       if (typeof window === 'undefined') return; // skip during server-side rendering
       try {

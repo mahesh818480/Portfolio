@@ -7,7 +7,6 @@ export class ActiveSectionService {
   active$ = this._active.asObservable();
 
   setActive(section: string) {
-    console.log(section,'11111111==')
     this._active.next(section);
   }
 }

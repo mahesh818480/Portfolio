@@ -1,1 +1,86 @@
-<p>projects works!</p>
+<section class="projects-container container">
+    <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+
+    <!-- Project 1: Component Library -->
+    <article class="project-card">
+        <div class="project-header">
+            <h3 class="project-title">Component Library with Storybook</h3>
+        </div>
+
+        <div class="project-content">
+            <div class="description-container">
+                <div class="project-description-wrapper" [class.expanded]="isExpanded(0)">
+                    <p class="project-description">
+                        Developed a reusable Angular component library showcased in Storybook, aimed at standardizing UI
+                        components across multiple projects. The library includes forms with validations, buttons,
+                        modals, carousels, and accordions, ensuring a consistent user experience. Implemented unit and
+                        integration tests for both HTML and TypeScript files to guarantee code reliability and
+                        maintainability. Leveraged Angular best practices such as Reactive Forms, modular architecture,
+                        and component-driven development.
+                    </p>
+                </div>
+                <button class="read-more-btn" (click)="toggleDescription(0)">
+                    {{ isExpanded(0) ? 'Read Less' : 'Read More' }}
+                </button>
+            </div>
+
+            <div class="highlights">
+                <h4>Key Highlights</h4>
+                <ul class="highlights-list">
+                    <li>Built reusable and customizable components with clear Storybook documentation</li>
+                    <li>Implemented form validations using Reactive Forms</li>
+                    <li>Created dynamic UI components like modals, carousels, and accordions</li>
+                    <li>Wrote unit tests for both TypeScript and template files to ensure stability</li>
+                    <li>Followed component-driven development principles to enhance reusability</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <!-- Project 2: Apartment Booking Application -->
+    <article class="project-card">
+        <div class="project-header">
+            <h3 class="project-title">Apartment Booking Application</h3>
+        </div>
+
+        <div class="project-content">
+            <div class="description-container">
+                <div class="project-description-wrapper" [class.expanded]="isExpanded(1)">
+                    <p class="project-description">
+                        Developed a comprehensive apartment booking application in Angular that allows users to browse
+                        apartments, select rooms, and manage bookings. Users can view room details such as square
+                        footage, number of bathrooms, and additional amenities, and check room availability in
+                        real-time. The application also tracks booking status, including confirmed and pending bookings,
+                        and calculates the total amount payable based on selected rooms and features.
+                    </p>
+
+                    <p class="project-description">
+                        This project emphasizes user-centric design, interactivity, and real-world functionality,
+                        providing a seamless booking experience. Features like floor selection, room configuration,
+                        real-time validations, and visual feedback make the application both engaging and reliable.
+                    </p>
+                </div>
+                <button class="read-more-btn" (click)="toggleDescription(1)">
+                    {{ isExpanded(1) ? 'Read Less' : 'Read More' }}
+                </button>
+            </div>
+
+            <div class="highlights">
+                <h4>Key Highlights</h4>
+                <ul class="highlights-list">
+                    <li>Built a dynamic room and floor selection system with detailed specifications for each apartment
+                    </li>
+                    <li>Implemented real-time availability tracking, showing which rooms are booked and which are
+                        pending</li>
+                    <li>Added booking management features, including confirmation status and pending requests</li>
+                    <li>Developed interactive forms with validations and conditional fields for accurate bookings</li>
+                    <li>Calculated room prices dynamically based on selected rooms and amenities</li>
+                    <li>Provided responsive and intuitive UI for desktop and mobile users</li>
+                    <li>Applied unit testing for forms, components, and booking logic to ensure reliability</li>
+                    <li>Designed the application for scalability, allowing future integration with backend APIs and
+                        payment gateways</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+</section>
